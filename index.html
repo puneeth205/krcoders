@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>King Sukh Guest House</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay"><div class="spinner"></div></div>
+
+  <!-- Header / Navbar -->
+  <header class="header" id="top">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="King Sukh Logo" />
+        <span>King Sukh</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#rooms" class="nav-link">Rooms</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#book" class="nav-link">Book Now</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <!-- Theme Toggle -->
+      <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="parallax-bg" style="background-image:url('assets/images/hero.jpg.webp');"></div>
+    <div class="overlay"></div>
+    <div class="hero-inner">
+      <h1 class="reveal">Experience Luxury at <span>King Sukh Guest House</span></h1>
+      <p class="reveal delay-1">Comfort, elegance, and warm hospitality—crafted for your perfect stay.</p>
+      <div class="cta reveal delay-2">
+        <a href="#rooms" class="btn primary">Explore Rooms</a>
+        <a href="#contact" class="btn ghost">Contact Us</a>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container grid-2">
+      <div class="card glass reveal">
+        <h2>About Us</h2>
+        <p>
+          Nestled amidst greenery, King Sukh Guest House blends modern amenities with the serenity of nature.
+        </p>
+        <ul class="ticks">
+          <li>✅ Central location & easy access</li>
+          <li>✅ Warm, courteous staff</li>
+          <li>✅ Clean, cozy & spacious rooms</li>
+        </ul>
+        <div class="center" style="margin-top:20px;">
+          <a href="#rooms" class="btn primary">Discover Our Rooms</a>
+        </div>
+      </div>
+      <div class="about-visual reveal delay-1">
+        <div class="stack">
+          <img src="assets/images/gallery1.jpg" alt="Courtyard" class="img-uniform" />
+          <img src="assets/images/gallery2.jpg" alt="Room Interior" class="img-uniform" />
+          <img src="assets/images/gallery3.jpg" alt="Dining Area" class="img-uniform" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms -->
+  <section class="section rooms" id="rooms">
+    <div class="container">
+      <h2 class="center">Rooms & Amenities</h2>
+      <div class="flip-grid">
+        <!-- Deluxe Room -->
+        <article class="flip-card reveal">
+          <div class="flip-inner">
+            <div class="flip-front" style="background-image:url('assets/images/room.png')">
+              <div class="tag">Deluxe</div>
+              <h3>Deluxe Room</h3>
+            </div>
+            <div class="flip-back">
+              <h3>Deluxe Room</h3>
+              <ul class="bullets">
+                <li>King bed, premium linens</li>
+                <li>Ensuite bath & toiletries</li>
+                <li>Complimentary breakfast</li>
+                <li>High-speed Wi-Fi</li>
+              </ul>
+              <a href="#book" class="btn small" onclick="selectRoom('Deluxe Room')">Book Now</a>
+            </div>
+          </div>
+        </article>
+        <!-- Dining -->
+        <article class="flip-card reveal delay-1">
+          <div class="flip-inner">
+            <div class="flip-front" style="background-image:url('assets/images/dining.png')">
+              <div class="tag">Dining</div>
+              <h3>In-House Dining</h3>
+            </div>
+            <div class="flip-back">
+              <h3>In-House Dining</h3>
+              <ul class="bullets">
+                <li>Multi-cuisine menu</li>
+                <li>Fresh & local produce</li>
+                <li>Room-service available</li>
+                <li>Custom dietary options</li>
+              </ul>
+              <a href="#book" class="btn small">Reserve Table</a>
+            </div>
+          </div>
+        </article>
+        <!-- Wi-Fi -->
+        <article class="flip-card reveal delay-2">
+          <div class="flip-inner">
+            <div class="flip-front" style="background-image:url('assets/images/wifi.png')">
+              <div class="tag">Wi-Fi</div>
+              <h3>Connectivity</h3>
+            </div>
+            <div class="flip-back">
+              <h3>High-Speed Wi-Fi</h3>
+              <ul class="bullets">
+                <li>Campus-wide coverage</li>
+                <li>Work-friendly desks</li>
+                <li>Power outlets aplenty</li>
+                <li>24×7 support</li>
+              </ul>
+              <a href="#book" class="btn small">Know More</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <h2 class="center">Gallery</h2>
+      <div class="masonry" id="masonry">
+        <img src="assets/images/gallery1.jpg" alt="Gallery 1" class="img-uniform reveal" />
+        <img src="assets/images/gallery2.jpg" alt="Gallery 2" class="img-uniform reveal delay-1" />
+        <img src="assets/images/gallery3.jpg" alt="Gallery 3" class="img-uniform reveal delay-2" />
+        <img src="assets/images/gallery4.jpg" alt="Gallery 4" class="img-uniform reveal" />
+        <img src="assets/images/gallery5.jpg" alt="Gallery 5" class="img-uniform reveal delay-1" />
+        <img src="assets/images/gallery6.jpg" alt="Gallery 6" class="img-uniform reveal delay-2" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lbClose">×</button>
+    <button class="lightbox-prev" id="lbPrev">‹</button>
+    <img id="lbImg" src="" alt="Lightbox Image"/>
+    <button class="lightbox-next" id="lbNext">›</button>
+  </div>
+
+  <!-- Book / Reservation -->
+   
+  <section class="section book" id="book">
+    <h2 class="center">Book Now</h2>
+    <div class="container grid-2">
+      <div class="card glass reveal">
+        <h2>Book Your Stay</h2>
+        <form class="form" id="bookForm" novalidate>
+          <div class="field">
+            <label>Name</label>
+            <input type="text" id="bookName" placeholder="Your Name" required />
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" id="bookEmail" placeholder="you@email.com" required />
+          </div>
+          <div class="field">
+            <label>Check-in Date</label>
+            <input type="date" id="checkin" required />
+          </div>
+          <div class="field">
+            <label>Check-out Date</label>
+            <input type="date" id="checkout" required />
+          </div>
+          <div class="field">
+            <label>Guests</label>
+            <input type="number" id="guests" placeholder="Number of guests" required min="1" />
+          </div>
+          <div class="field">
+            <label>Room Type</label>
+            <select id="roomType" required>
+              <option value="">-- Select Room Type --</option>
+              <option value="Deluxe Room">Deluxe Room</option>
+              <option value="Executive Suite">Executive Suite</option>
+              <option value="Standard Room">Standard Room</option>
+            </select>
+          </div>
+          <button class="btn primary full" type="submit">Book Now</button>
+          <p class="form-note" id="bookNote"></p>
+        </form>
+      </div>
+      <div class="book-info reveal delay-1">
+        <h3>Why Book With Us?</h3>
+        <ul>
+          <li>✅ Instant confirmation</li>
+          <li>✅ Secure and easy payment</li>
+          <li>✅ Personalized stay experience</li>
+          <li>✅ 24/7 customer support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  
+  <section class="section contact" id="contact">
+    <h2 class="center">Contact</h2>
+    <div class="container grid-2">
+      <div class="card glass reveal">
+        <h2>Get in Touch</h2>
+        <form class="form" id="contactForm" novalidate>
+          <div class="field">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+          <div class="field">
+            <label>Message</label>
+            <textarea id="message" rows="4" placeholder="How can we help?" required></textarea>
+          </div>
+          <button class="btn primary full" type="submit">Send Message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+      <div class="map-card reveal delay-1">
+        <iframe
+          title="Map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Beside%20Barshal%20Water%20Tank,%20Manpur,%20Barhanti,%20West%20Bengal%20723156&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> King Sukh Guest House — All rights reserved.</p>
+      <a href="#top" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script>
+    // Auto-select room type from rooms section
+    function selectRoom(roomName) {
+      const select = document.getElementById('roomType');
+      if(select) select.value = roomName;
+      window.location.hash = '#book';
+    }
+
+    // Booking form submission
+    const bookForm = document.getElementById('bookForm');
+    const bookNote = document.getElementById('bookNote');
+    if (bookForm) {
+      bookForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const name = document.getElementById('bookName').value.trim();
+        const email = document.getElementById('bookEmail').value.trim();
+        const checkin = document.getElementById('checkin').value;
+        const checkout = document.getElementById('checkout').value;
+        const guests = document.getElementById('guests').value;
+        const roomType = document.getElementById('roomType').value;
+
+        if (!name || !email || !checkin || !checkout || !guests || !roomType) {
+          bookNote.textContent = '⚠️ Please fill in all the fields.';
+          bookNote.style.color = '#ffd166';
+          return;
+        }
+
+        bookNote.textContent = `✅ Thank you, ${name}! Your booking for ${roomType} from ${checkin} to ${checkout} for ${guests} guest(s) is received.`;
+        bookNote.style.color = '#4de1ca';
+        bookForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - King Sukh Guest House</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="fade-in">
+
+  <!-- Navbar -->
+  <header class="header" id="top">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Logo" />
+        <span>King Sukh</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</div>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="section contact">
+    <div class="container grid-2">
+      
+      <!-- Contact Form -->
+      <div class="card glass reveal">
+        <h1>Contact Us</h1>
+        <p class="muted">We’d love to hear from you. Send us a message below.</p>
+        <form class="form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Your message..." required></textarea>
+          </div>
+          <button class="btn primary full" type="submit">Send</button>
+          <p class="form-note" id="formNote" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <!-- Map -->
+      <div class="map-card reveal delay-1">
+        <iframe
+          title="Map location of King Sukh Guest House"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Beside%20Barshal%20Water%20Tank,%20Manpur,%20Barhanti,%20West%20Bengal%20723156&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> King Sukh Guest House</p>
+      <a href="#top" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

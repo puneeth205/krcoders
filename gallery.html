@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - King Sukh Guest House</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="fade-in">
+
+  <!-- Navbar -->
+  <header class="header" id="top">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Logo" />
+        <span>King Sukh</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</div>
+    </nav>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <h1 class="center reveal">Our Gallery</h1>
+      <p class="muted center reveal delay-1">Take a closer look at the elegance and comfort of King Sukh Guest House.</p>
+
+      <div class="masonry" id="masonry">
+        <img src="assets/images/gallery1.jpg" alt="Courtyard" class="reveal img-uniform" />
+        <img src="assets/images/gallery2.jpg" alt="Room Interior" class="reveal delay-1 img-uniform" />
+        <img src="assets/images/gallery3.jpg" alt="Dining Area" class="reveal delay-2 img-uniform" />
+        <img src="assets/images/gallery4.jpg" alt="Luxury Room" class="reveal img-uniform" />
+        <img src="assets/images/gallery5.jpg" alt="Restaurant" class="reveal delay-1 img-uniform" />
+        <img src="assets/images/gallery6.jpg" alt="WiFi Lounge" class="reveal delay-2 img-uniform" />
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lbClose" aria-label="Close">&times;</button>
+      <button class="lightbox-prev" id="lbPrev" aria-label="Previous">&#10094;</button>
+      <img id="lbImg" alt="Preview" />
+      <button class="lightbox-next" id="lbNext" aria-label="Next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> King Sukh Guest House</p>
+      <a href="#top" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

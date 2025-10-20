@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rooms - King Sukh Guest House</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="fade-in">
+
+  <!-- Navbar -->
+  <header class="header" id="top">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Logo" />
+        <span>King Sukh</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="rooms.html" class="nav-link active">Rooms</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</div>
+    </nav>
+  </header>
+
+  <!-- Rooms Section -->
+  <section class="section rooms">
+    <div class="container">
+      <h1 class="center reveal">Our Rooms</h1>
+      <p class="muted center reveal delay-1">Choose from our best categories designed for your comfort.</p>
+
+      <div class="flip-grid">
+
+        <!-- Deluxe Room -->
+        <article class="flip-card reveal delay-2">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="assets/images/room.jpg" alt="Deluxe Room" class="img-uniform">
+              <div class="tag">Deluxe</div>
+              <h3>Deluxe Room</h3>
+            </div>
+            <div class="flip-back">
+              <h3>Deluxe Room</h3>
+              <ul class="bullets">
+                <li>King-size bed with premium linens</li>
+                <li>Ensuite bath & toiletries</li>
+                <li>Complimentary breakfast</li>
+                <li>High-speed Wi-Fi</li>
+              </ul>
+              <a href="contact.html" class="btn small">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Executive Suite -->
+        <article class="flip-card reveal delay-3">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="assets/images/gallery2.jpg" alt="Executive Suite" class="img-uniform">
+              <div class="tag">Executive</div>
+              <h3>Executive Suite</h3>
+            </div>
+            <div class="flip-back">
+              <h3>Executive Suite</h3>
+              <ul class="bullets">
+                <li>Spacious living area</li>
+                <li>Mini bar & dining space</li>
+                <li>Workstation with desk</li>
+                <li>Priority service</li>
+              </ul>
+              <a href="contact.html" class="btn small">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Standard Room -->
+        <article class="flip-card reveal delay-4">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="assets/images/gallery3.jpg" alt="Standard Room" class="img-uniform">
+              <div class="tag">Standard</div>
+              <h3>Standard Room</h3>
+            </div>
+            <div class="flip-back">
+              <h3>Standard Room</h3>
+              <ul class="bullets">
+                <li>Queen-size bed</li>
+                <li>Attached bathroom</li>
+                <li>Air conditioning</li>
+                <li>Value for money</li>
+              </ul>
+              <a href="contact.html" class="btn small">Book Now</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> King Sukh Guest House</p>
+      <a href="#top" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox (Optional for gallery images) -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lbClose">×</button>
+    <button class="lightbox-prev" id="lbPrev">‹</button>
+    <img id="lbImg" src="" alt="Lightbox image" />
+    <button class="lightbox-next" id="lbNext">›</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

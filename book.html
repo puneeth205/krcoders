@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Now - King Sukh Guest House</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="fade-in">
+
+  <!-- Navbar -->
+  <header class="header" id="top">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Logo" />
+        <span>King Sukh</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="book.html" class="nav-link active">Book Now</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</div>
+    </nav>
+  </header>
+
+  <!-- Booking Section -->
+  <section class="section booking">
+    <div class="container grid-2">
+
+      <!-- Booking Form -->
+      <div class="card glass reveal">
+        <h2>Book Your Stay</h2>
+        <p class="muted">Fill in the details below and we’ll confirm your booking.</p>
+
+        <form class="form" id="bookForm" novalidate>
+          <div class="field">
+            <label for="guestName">Full Name</label>
+            <input type="text" id="guestName" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="guestEmail">Email</label>
+            <input type="email" id="guestEmail" placeholder="your@email.com" required />
+          </div>
+          <div class="field">
+            <label for="checkin">Check-in</label>
+            <input type="date" id="checkin" required />
+          </div>
+          <div class="field">
+            <label for="checkout">Check-out</label>
+            <input type="date" id="checkout" required />
+          </div>
+          <div class="field">
+            <label for="guests">Guests</label>
+            <input type="number" id="guests" min="1" max="10" value="1" required />
+          </div>
+          <div class="field">
+            <label for="roomType">Room Type</label>
+            <select id="roomType" required>
+              <option value="">-- Select Room Type --</option>
+              <option value="Deluxe Room">Deluxe Room</option>
+              <option value="Executive Suite">Executive Suite</option>
+              <option value="Standard Room">Standard Room</option>
+            </select>
+          </div>
+
+          <button class="btn primary full" type="submit">Confirm Booking</button>
+          <p class="form-note" id="bookNote"></p>
+        </form>
+      </div>
+
+      <!-- Booking Visual -->
+      <div class="booking-visual reveal delay-1">
+        <img src="assets/images/room.png" alt="Booking Preview" class="booking-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> King Sukh Guest House</p>
+      <a href="#top" class="to-top" id="toTop">↑</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script>
+    // Booking Form JS
+    const bookForm = document.getElementById('bookForm');
+    const bookNote = document.getElementById('bookNote');
+    if (bookForm) {
+      bookForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const name = document.getElementById('guestName').value.trim();
+        const email = document.getElementById('guestEmail').value.trim();
+        const checkin = document.getElementById('checkin').value;
+        const checkout = document.getElementById('checkout').value;
+        const guests = document.getElementById('guests').value;
+        const roomType = document.getElementById('roomType').value;
+
+        if (!name || !email || !checkin || !checkout || !guests || !roomType) {
+          bookNote.textContent = '⚠️ Please fill in all the fields.';
+          bookNote.style.color = '#ffd166';
+          return;
+        }
+
+        bookNote.textContent = `✅ Thank you, ${name}! Your booking for ${roomType} from ${checkin} to ${checkout} for ${guests} guest(s) is received.`;
+        bookNote.style.color = '#4de1ca';
+        bookForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>
