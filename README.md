@@ -88,7 +88,9 @@ Website-Redesign/
 ## 👨‍💻 Author
 
 K.PUNEETH REDDY
+
 Frontend Web Developer
+
 📧 245123733124@mvsrec.edu.in
 
 🌐 www.linkedin.com/in/k-puneeth-reddy-b4a214299
