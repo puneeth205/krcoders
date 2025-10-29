@@ -95,7 +95,7 @@ Frontend Web Developer
 
 📧 245123733124@mvsrec.edu.in
 
-🌐 www.linkedin.com/in/k-puneeth-reddy-b4a214299
+🌐 www.linkedin.com/in/k-puneeth-reddy
 
 ---
 
