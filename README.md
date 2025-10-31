@@ -8,7 +8,7 @@ A modern, responsive redesign of the **King Sukh Guest House** website. This pro
 
 Add link here once deployed, e.g., GitHub Pages or Netlify:
 
-[(https://gentle-unicorn-d7676a.netlify.app/)](https://king-suka-guesthouse.netlify.app/)
+(https://king-suka-guesthouse.netlify.app/)
 
 ---
 
